@@ -1,0 +1,633 @@
+/* =================================== */
+/* 🔄 RESET BÁSICO DEL NAVEGADOR       */
+/* =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =================================== */
+/* 🔷 NAVBAR / MENÚ SUPERIOR           */
+/* =================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =================================== */
+/* 🔷 LOGO DEL COLEGIO                 */
+/* =================================== */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 14px;
+  color: #0b2e59;
+}
+
+.district {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 🔹 Menú de navegación principal */
+.nav {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Enlaces del menú */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a[href="index.html"] {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #FFD700;
+}
+
+/* =================================== */
+/* 🔸 BOTONES: EVENTOS e INGRESAR      */
+/* =================================== */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-eventos {
+  background-color:  #0a427c;
+  color: #FFD700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-eventos:hover {
+  background-color: #0a427c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn-ingresar {
+  background-color: #FFD700;
+  color: #08306b;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-ingresar:hover {
+  background-color: #f7c600;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Botones alternativos */
+.outline-btn {
+  background: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+}
+
+.solid-btn {
+  background: #FFD700;
+  color: black;
+}
+
+/* =================================== */
+/* 🟪 SECCIÓN HERO PRINCIPAL           */
+/* =================================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  color: white;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 20px;
+}
+
+/* =================================== */
+/* 🟩 ICONOS DE ACCESO RÁPIDO          */
+/* =================================== */
+.icon-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -40px;
+  z-index: 2;
+  position: relative;
+}
+
+.icon-box {
+  width: 150px;
+  padding: 30px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.icon-box img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* 🎨 Colores personalizados */
+.green  { background: #bce3d4; color: #08306b; }
+.yellow { background: #FFD700; color: #08306b; }
+
+.purple { background: #d2c2e2; color: #08306b; }
+.peach  { background: #f9d0a2; color: #08306b; }
+.blue   { background: #1E90FF; color: #08306b; }
+
+/* =================================== */
+/* 🔽 SUBMENÚS DESPLEGABLES            */
+/* =================================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .nav-link {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 999;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: flex;
+}
+
+/* =================================== */
+/* 📰 NOTICIAS DESTACADAS              */
+/* =================================== */
+.noticias-destacadas {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.noticias-destacadas h2 {
+  font-size: 28px;
+  color: #08306b;
+  margin-bottom: 30px;
+}
+
+.noticias-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.noticia {
+  width: 400px;
+}
+
+.noticia img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.noticia img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.noticia p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* =================================== */
+/* 🖼️ GALERÍA DE FOTOS                 */
+/* =================================== */
+.galeria-fotos {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.galeria-fotos h2 {
+  font-size: 28px;
+  color: #08306b;
+  margin-bottom: 30px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+
+
+
+
+
+
+/* =================================== */
+/* 💫 EFECTOS DE HOVER EN ICONOS       */
+/* =================================== */
+.hover-icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.hover-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hover-icon img {
+  transition: transform 0.3s ease;
+}
+
+.hover-icon:hover img {
+  transform: scale(1.5);
+}
+
+.hover-icon p {
+  transition: color 0.3s ease;
+}
+
+.hover-icon:hover p {
+  color: #08306b;
+}
+
+/* ============================ */
+/* 🪟 MODAL PARA NOTICIAS DESTACADAS */
+/* ============================ */
+.modal-noticia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-noticia.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #08306b;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #08306b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ============================== */
+/* 🖼️ LIGHTBOX PARA GALERÍA DE FOTOS */
+/* ============================== */
+.lightbox-galeria {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-galeria.show {
+  display: flex;
+}
+
+.lightbox-galeria-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.close-galeria {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: 30px;
+}
+
+.arrow.right {
+  right: 30px;
+}
+
+/* ============================== */
+/* 🖼️ HAMBURGUESA PARA NAVEGACIÓN    */
+/* ============================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #08306b;
+  transition: all 0.3s ease;
+}
+
+.nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* ================================================== */
+/* 📱 DISEÑO RESPONSIVO                              */
+/* ================================================== */
+
+/* Móviles y tablets (< 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo { margin-bottom: 10px; }
+
+  .nav { display: none; }
+  .hamburger { display: flex; }
+
+  .nav.open {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-link { font-size: 18px; }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .nav-buttons a {
+    width: 80%;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero-overlay {
+    padding: 20px;
+  }
+
+  .hero-overlay h1 { font-size: 28px; }
+  .hero-overlay p { font-size: 16px; }
+
+  /* Iconos acceso rápido */
+  .icon-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icon-box {
+    max-width: 280px;
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .icon-box img { width: 35px; }
+
+  /* Noticias */
+  .noticia { width: 90%; }
+  .noticia img { height: auto; }
+  .noticias-destacadas h2 { font-size: 24px; }
+  .noticia p { font-size: 14px; }
+
+  /* Galería */
+  .galeria-fotos h2 { font-size: 24px; }
+  .galeria-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  .galeria-grid img { height: 180px; }
+
+  /* Lightbox */
+  .close-galeria,
+  .arrow {
+    font-size: 32px;
+    padding: 8px;
+  }
+  .arrow.left { left: 10px; }
+  .arrow.right { right: 10px; }
+
+  /* Modal */
+  .modal-content { padding: 15px; }
+  .modal-content p { font-size: 14px; }
+  .modal-close { font-size: 24px; }
+}
+
+/* Teléfonos pequeños (< 480px) */
+@media (max-width: 480px) {
+  .hero-overlay h1 { font-size: 22px; }
+  .hero-overlay p { font-size: 14px; }
+  .nav-buttons a {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .noticias-destacadas h2,
+  .galeria-fotos h2 { font-size: 20px; }
+}
