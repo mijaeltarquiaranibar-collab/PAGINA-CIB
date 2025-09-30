@@ -1,0 +1,108 @@
+/* 🟩 HERO RECURSOS */
+.recursos-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recursos-header {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 35px 45px;
+  max-width: 850px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recursos-header:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.recursos-header h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.recursos-header p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 🟦 LISTA DE RECURSOS */
+.recursos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px 20px 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 🗂️ TARJETA DE RECURSO */
+.recurso-card {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recurso-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.14);
+}
+
+.recurso-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.recurso-card:hover img {
+  transform: scale(1.1);
+}
+
+/* 📝 Títulos y descripciones */
+.recurso-card h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.recurso-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .recursos-lista {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .recursos-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .recursos-header p {
+    font-size: 1rem;
+  }
+}

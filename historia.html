@@ -1,38 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Historia | Colegio Internacional Bilingüe</title>
+  <title>Historia - Colegio Internacional Bilingue</title>
+
+  <!-- Icono -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="historia.css" />
 </head>
+
 <body>
 
-  <!-- Reutiliza tu encabezado -->
+  <!-- 🟨 NAVBAR -->
   <header class="navbar">
-    <!-- Misma barra de navegación del sitio principal -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <div class="logo-text">
+        <span class="district">COLEGIO INTERNACIONAL BILINGUE</span><br>
+        <span class="subtitle">Santa Cruz</span>
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <span class="nav-link">Nosotros ▾</span>
+        <div class="dropdown-content">
+          <a href="mision-vision.html">Misión y Visión</a>
+          <a href="historia.html" class="active">Historia</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Oferta educativa ▾</span>
+        <div class="dropdown-content">
+          <a href="inicial.html">Inicial</a>
+          <a href="primaria.html">Primaria</a>
+          <a href="secundaria.html">Secundaria</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Noticias ▾</span>
+        <div class="dropdown-content">
+          <a href="comunicados.html">Comunicados</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Contacto ▾</span>
+        <div class="dropdown-content">
+          <a href="informacion.html">Información</a>
+          <a href="ubicacion.html">Ubicación</a>
+          <a href="redes.html">Redes Sociales</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="eventos.html" class="btn-eventos">EVENTOS</a>
+      <a href="https://moodle.tucolegio.edu" target="_blank" rel="noopener" class="btn-ingresar">INGRESAR</a>
+    </div>
   </header>
 
-  <main class="contenido-pagina">
-    <section class="section-titulo">
-      <h1>Nuestra Historia</h1>
-    </section>
+  <!-- 🟩 SECCIÓN HERO HISTORIA -->
+  <section class="historia-hero">
+  <div class="historia-header">
+    <h1>Nuestra Historia</h1>
+    <p>Conoce los orígenes, el crecimiento y la trayectoria de nuestro colegio a lo largo de los años.</p>
+  </div>
+</section>
 
-    <section class="texto-section">
+
+  <!-- 🟦 CONTENIDO HISTORIA -->
+  <section class="historia-contenido">
+    <div class="historia-texto">
+      <h2>Inicios</h2>
       <p>
-        Fundado en el año 2001, el Colegio Internacional Bilingüe nació con la visión de ofrecer una alternativa educativa moderna en Santa Cruz. Desde sus inicios, se ha destacado por promover una educación bilingüe, con enfoque en la innovación, el pensamiento crítico y los valores éticos.
+       El colegio estuvo bajo la dirección de prestigiosas docentes: Prof: Clorys Céspedes, Prof: Delsy Martinez, Lic. Shanon O’ Brien, Lic. Tania Plaza, Lic. Silvia Toro.
       </p>
 
+      <h2>Crecimiento</h2>
       <p>
-        A lo largo de los años, hemos crecido en infraestructura, programas académicos y reconocimiento institucional, sin perder nuestro compromiso con la calidad educativa y el desarrollo integral de nuestros estudiantes.
+        Actualmente cuenta con un personal Docente y Administrativo de profesionales altamente calificados, que imparten una educación individual y personalizada, bajo la dirección de la Lic. Francia Soliz Sossa, quien dirige el colegio desde el año 2008.
+        Desde el año 2015 el Lic. Mgs Alfonso Vargas Guzmán es el Director General y presidente del Directorio del colegio y la Lic. Francia Soliz Sossa es la Directora Académica.
       </p>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 Colegio Internacional Bilingüe - Santa Cruz</p>
-  </footer>
+      <h2>Actualidad</h2>
+      <p>
+        Se cuenta además con una sala de computación especialmente diseñada para la enseñanza, con un gabinete psicológico y un coliseo para practicar deporte. El colegio cuenta con una psicopedagoga que ayuda a los alumnos. Todas esas características que tiene el colegio Internacional Bilingüe Santa Cruz hacen que este sea excepcional, porque se ha ganado calidad, experiencia y prestigio en base al esfuerzo y trabajo mancomunado de todos, alumnos, padres de familia, docentes y administrativos.
+      </p>
+    </div>
+
+    <div class="historia-imagenes">
+      <img src="images/historia/historia1.jpg" alt="Fundación del colegio">
+      <img src="images/historia/historia2.jpg" alt="Estudiantes en actividades">
+      <img src="images/historia/historia3.jpg" alt="Infraestructura del colegio">
+    </div>
+  </section>
 
 </body>
 </html>

@@ -1,41 +1,123 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Misión y Visión | Colegio Internacional Bilingüe</title>
+  <title>Misión y Visión - Colegio Internacional Bilingue</title>
+
+  <!-- Icono del logo -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- CSS general y específico -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="mision-vision.css" />
 </head>
+
 <body>
 
-  <!-- Reutiliza tu encabezado -->
+  <!-- 🟨 BARRA DE NAVEGACIÓN PRINCIPAL -->
   <header class="navbar">
-    <!-- Copia el mismo contenido del navbar que ya tienes -->
-    <!-- Puedes usar include con JS o repetirlo si no estás usando ningún framework -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <div class="logo-text">
+        <span class="district">COLEGIO INTERNACIONAL BILINGUE</span><br>
+        <span class="subtitle">Santa Cruz</span>
+      </div>
+    </div>
+
+    <!-- Ícono Hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- 🟦 MENÚ DE NAVEGACIÓN -->
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <span class="nav-link">Nosotros ▾</span>
+        <div class="dropdown-content">
+          <a href="mision-vision.html">Misión y Visión</a>
+          <a href="historia.html">Historia</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Oferta educativa ▾</span>
+        <div class="dropdown-content">
+          <a href="inicial.html">Inicial</a>
+          <a href="primaria.html">Primaria</a>
+          <a href="secundaria.html">Secundaria</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Noticias ▾</span>
+        <div class="dropdown-content">
+          <a href="comunicados.html">Comunicados</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Contacto ▾</span>
+        <div class="dropdown-content">
+          <a href="informacion.html">Información</a>
+          <a href="ubicacion.html">Ubicación</a>
+          <a href="redes.html">Redes Sociales</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 🟨 BOTONES A LA DERECHA: EVENTOS e INGRESAR -->
+    <div class="nav-buttons">
+      <a href="eventos.html" class="btn-eventos">EVENTOS</a>
+      <a href="https://moodle.tucolegio.edu" target="_blank" rel="noopener" class="btn-ingresar">INGRESAR</a>
+    </div>
   </header>
 
-  <main class="contenido-pagina">
-    <section class="section-titulo">
-      <h1>Misión y Visión</h1>
-    </section>
 
-    <section class="texto-section">
+
+  <!-- 🟩 BLOQUE DE MISION Y VISION -->
+
+<!-- 🟩 BLOQUE DE MISIÓN Y VISIÓN -->
+<section class="mision-vision-hero">
+  <div class="mision-vision-container">
+
+    <!-- MISIÓN -->
+    <div class="mision-column">
+      <!-- Contenedor del icono -->
+      <div class="icon-top">
+        <img src="images/icons/mision.png" alt="Icono Misión">
+      </div>
       <h2>Misión</h2>
       <p>
-        Nuestra misión es brindar una educación integral, bilingüe y de excelencia, que forme líderes comprometidos con su comunidad y preparados para enfrentar los desafíos del mundo globalizado.
+        Nuestra misión es ofrecer una educación integral bilingüe de alta calidad, fomentando valores, habilidades
+        académicas y competencias sociales que formen líderes responsables, creativos y comprometidos con la sociedad.
       </p>
+      <img src="images/mision.jpg" alt="Imagen Misión" class="mision-img">
+    </div>
 
+    <!-- VISIÓN -->
+    <div class="vision-column">
+      <!-- Contenedor del icono -->
+      <div class="icon-top">
+        <img src="images/icons/vision.png" alt="Icono Visión">
+      </div>
       <h2>Visión</h2>
       <p>
-        Ser una institución educativa de referencia nacional e internacional, reconocida por su innovación pedagógica, valores humanistas y formación académica de alto nivel.
+        Ser reconocidos como un colegio referente en educación bilingüe, innovadora y formativa, donde cada estudiante
+        desarrolle su máximo potencial y contribuya positivamente al desarrollo de la comunidad local y global.
       </p>
-    </section>
-  </main>
+      <img src="images/vision.jpg" alt="Imagen Visión" class="vision-img">
+    </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Colegio Internacional Bilingüe - Santa Cruz</p>
-  </footer>
+  </div>
+</section>
+
+
 
 </body>
 </html>

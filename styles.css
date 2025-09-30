@@ -7,74 +7,97 @@
   box-sizing: border-box;
 }
 
+/* =================================== */
+/* 🔄 FONDO GENERAL DE LA PÁGINA       */
+/* =================================== */
 body {
   font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f0f4ff, #ffffff); /* degradado claro */
+  color: #222; /* color de texto general */
 }
 
 /* =================================== */
 /* 🔷 NAVBAR / MENÚ SUPERIOR           */
 /* =================================== */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: white;
+  background: linear-gradient(135deg, #08306b, #0a427c); /* 🔵 degradado elegante */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+
+/* =================================== */ 
+/* 🔷 LOGO DEL COLEGIO */ 
 /* =================================== */
-/* 🔷 LOGO DEL COLEGIO                 */
-/* =================================== */
-.logo {
-  display: flex;
-  align-items: center;
-}
+.logo { 
+  display: flex; 
+  align-items: center; }
+
 
 .logo img {
-  width: 65px;
-  height: 65px;
+  width: 62px;
+  height: 62px;
   margin-right: 10px;
 }
 
 .logo-text {
   font-size: 14px;
-  color: #0b2e59;
+  color: white; 
 }
 
 .district {
   font-weight: bold;
   font-size: 18px;
+  color: #FFD700; 
 }
 
-/* 🔹 Menú de navegación principal */
+/* =================================== */ 
+/* 🔷 MENU DE NAVEGACION PRINCIPAL */ 
+/* =================================== */
 .nav {
   display: flex;
   gap: 20px;
   font-size: 16px;
-  color: #222;
 }
 
-/* Enlaces del menú */
 .nav-link {
   position: relative;
-  transition: color 0.3s ease;
+  color: white; /* ✅ blanco para mejor contraste */
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.nav a[href="index.html"] {
-  text-decoration: none;
+/* Efecto subrayado animado */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
   color: #FFD700;
 }
 
-/* =================================== */
-/* 🔸 BOTONES: EVENTOS e INGRESAR      */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* =================================== */ 
+/* 🔸 BOTONES: EVENTOS e INGRESAR */ 
 /* =================================== */
 .nav-buttons {
   display: flex;
@@ -82,7 +105,7 @@ body {
 }
 
 .btn-eventos {
-  background-color:  #0a427c;
+  background-color: #0a427c;
   color: #FFD700;
   padding: 10px 20px;
   border: none;
@@ -119,7 +142,6 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-/* Botones alternativos */
 .outline-btn {
   background: transparent;
   border: 2px solid #FFD700;
@@ -129,6 +151,74 @@ body {
 .solid-btn {
   background: #FFD700;
   color: black;
+}
+
+/* =================================== */
+/* 🔽 SUBMENÚS DESPLEGABLES            */
+/* =================================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .nav-link {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px) scale(0.95);
+  transition: all 0.35s ease;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 10px;
+  min-width: 200px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 999;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.dropdown-content a {
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #08306b;
+  font-size: 15px;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: #FFD700;
+  color: #08306b;
+  padding-left: 25px;
+  box-shadow: inset 5px 0 0 #0a427c;
+}
+
+/* Animación escalonada */
+.dropdown:hover .dropdown-content a {
+  animation: fadeSlide 0.4s ease forwards;
+  opacity: 0;
+}
+
+.dropdown:hover .dropdown-content a:nth-child(1) { animation-delay: 0.05s; }
+.dropdown:hover .dropdown-content a:nth-child(2) { animation-delay: 0.1s; }
+.dropdown:hover .dropdown-content a:nth-child(3) { animation-delay: 0.15s; }
+.dropdown:hover .dropdown-content a:nth-child(4) { animation-delay: 0.2s; }
+.dropdown:hover .dropdown-content a:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(-15px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 /* =================================== */
@@ -203,151 +293,14 @@ body {
   margin-bottom: 10px;
 }
 
-/* 🎨 Colores personalizados */
+/* 🎨 Colores */
 .green  { background: #bce3d4; color: #08306b; }
 .yellow { background: #FFD700; color: #08306b; }
-
 .purple { background: #d2c2e2; color: #08306b; }
 .peach  { background: #f9d0a2; color: #08306b; }
 .blue   { background: #1E90FF; color: #08306b; }
 
-/* =================================== */
-/* 🔽 SUBMENÚS DESPLEGABLES            */
-/* =================================== */
-.dropdown {
-  position: relative;
-}
-
-.dropdown .nav-link {
-  cursor: pointer;
-}
-
-.dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  min-width: 180px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  z-index: 999;
-  flex-direction: column;
-}
-
-.dropdown-content a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #222;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  display: flex;
-}
-
-/* =================================== */
-/* 📰 NOTICIAS DESTACADAS              */
-/* =================================== */
-.noticias-destacadas {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.noticias-destacadas h2 {
-  font-size: 28px;
-  color: #08306b;
-  margin-bottom: 30px;
-}
-
-.noticias-grid {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.noticia {
-  width: 400px;
-}
-
-.noticia img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
-}
-
-.noticia img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.05) contrast(1.05);
-}
-
-.noticia p {
-  font-size: 16px;
-  color: #333;
-}
-
-/* =================================== */
-/* 🖼️ GALERÍA DE FOTOS                 */
-/* =================================== */
-.galeria-fotos {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.galeria-fotos h2 {
-  font-size: 28px;
-  color: #08306b;
-  margin-bottom: 30px;
-}
-
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-}
-
-.galeria-grid img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
-}
-
-.galeria-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.05) contrast(1.05);
-}
-
-
-
-
-
-
-
-/* =================================== */
-/* 💫 EFECTOS DE HOVER EN ICONOS       */
-/* =================================== */
+/* Hover en iconos */
 .hover-icon {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   position: relative;
@@ -375,9 +328,95 @@ body {
   color: #08306b;
 }
 
-/* ============================ */
-/* 🪟 MODAL PARA NOTICIAS DESTACADAS */
-/* ============================ */
+/* =================================== */
+/* 📰 NOTICIAS DESTACADAS              */
+/* =================================== */
+.noticias-destacadas {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* fondo blanco */
+}
+
+.noticias-destacadas h2 {
+  font-size: 28px;
+  color: #08306b; /* azul oscuro */
+  margin-bottom: 30px;
+}
+
+.noticias-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.noticia {
+  width: 400px;
+}
+
+.noticia img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra ligera */
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.noticia img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* sombra más fuerte al pasar el mouse */
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.noticia p {
+  font-size: 16px;
+  color: #333; /* texto gris oscuro */
+}
+
+
+/* =================================== */
+/* 🖼️ GALERÍA DE FOTOS                 */
+/* =================================== */
+.galeria-fotos {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff; /* fondo blanco */
+}
+
+.galeria-fotos h2 {
+  font-size: 28px;
+  color: #08306b; /* azul oscuro */
+  margin-bottom: 30px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+
+
+/* =================================== */
+/* 🪟 MODAL PARA NOTICIAS DESTACADAS   */
+/* =================================== */
 .modal-noticia {
   position: fixed;
   top: 0;
@@ -438,9 +477,9 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* ============================== */
-/* 🖼️ LIGHTBOX PARA GALERÍA DE FOTOS */
-/* ============================== */
+/* =================================== */
+/* 🖼️ LIGHTBOX GALERÍA DE FOTOS        */
+/* =================================== */
 .lightbox-galeria {
   display: none;
   position: fixed;
@@ -487,17 +526,12 @@ body {
   border-radius: 50%;
 }
 
-.arrow.left {
-  left: 30px;
-}
+.arrow.left { left: 30px; }
+.arrow.right { right: 30px; }
 
-.arrow.right {
-  right: 30px;
-}
-
-/* ============================== */
-/* 🖼️ HAMBURGUESA PARA NAVEGACIÓN    */
-/* ============================== */
+/* =================================== */
+/* 🖼️ HAMBURGUESA PARA NAVEGACIÓN      */
+/* =================================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -527,13 +561,10 @@ body {
   z-index: 999;
 }
 
-/* ================================================== */
-/* 📱 DISEÑO RESPONSIVO                              */
-/* ================================================== */
-
-/* Móviles y tablets (< 768px) */
+/* =================================== */
+/* 📱 DISEÑO RESPONSIVO                */
+/* =================================== */
 @media (max-width: 768px) {
-  /* Navbar */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -568,36 +599,24 @@ body {
     font-size: 16px;
   }
 
-  /* Hero */
-  .hero-overlay {
-    padding: 20px;
-  }
-
+  .hero-overlay { padding: 20px; }
   .hero-overlay h1 { font-size: 28px; }
   .hero-overlay p { font-size: 16px; }
 
-  /* Iconos acceso rápido */
-  .icon-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
+  .icon-links { flex-direction: column; gap: 10px; }
   .icon-box {
     max-width: 280px;
     width: 90%;
     font-size: 16px;
     margin-bottom: 10px;
   }
-
   .icon-box img { width: 35px; }
 
-  /* Noticias */
   .noticia { width: 90%; }
   .noticia img { height: auto; }
   .noticias-destacadas h2 { font-size: 24px; }
   .noticia p { font-size: 14px; }
 
-  /* Galería */
   .galeria-fotos h2 { font-size: 24px; }
   .galeria-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -605,7 +624,6 @@ body {
   }
   .galeria-grid img { height: 180px; }
 
-  /* Lightbox */
   .close-galeria,
   .arrow {
     font-size: 32px;
@@ -614,13 +632,11 @@ body {
   .arrow.left { left: 10px; }
   .arrow.right { right: 10px; }
 
-  /* Modal */
   .modal-content { padding: 15px; }
   .modal-content p { font-size: 14px; }
   .modal-close { font-size: 24px; }
 }
 
-/* Teléfonos pequeños (< 480px) */
 @media (max-width: 480px) {
   .hero-overlay h1 { font-size: 22px; }
   .hero-overlay p { font-size: 14px; }

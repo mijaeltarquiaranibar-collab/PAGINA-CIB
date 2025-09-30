@@ -1,24 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oferta Educativa - Secundaria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nivel Secundaria - Colegio Internacional Bilingue</title>
 
+  <!-- Icono -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="secundaria.css" />
-
 </head>
+
 <body>
 
-  <!-- Menú de navegación -->
+  <!-- 🟨 NAVBAR -->
   <header class="navbar">
-    <!-- Copia tu menú aquí -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <div class="logo-text">
+        <span class="district">COLEGIO INTERNACIONAL BILINGUE</span><br>
+        <span class="subtitle">Santa Cruz</span>
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <span class="nav-link">Nosotros ▾</span>
+        <div class="dropdown-content">
+          <a href="mision-vision.html">Misión y Visión</a>
+          <a href="historia.html">Historia</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Oferta educativa ▾</span>
+        <div class="dropdown-content">
+          <a href="inicial.html">Inicial</a>
+          <a href="primaria.html">Primaria</a>
+          <a href="secundaria.html" class="active">Secundaria</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Noticias ▾</span>
+        <div class="dropdown-content">
+          <a href="comunicados.html">Comunicados</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Contacto ▾</span>
+        <div class="dropdown-content">
+          <a href="informacion.html">Información</a>
+          <a href="ubicacion.html">Ubicación</a>
+          <a href="redes.html">Redes Sociales</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="eventos.html" class="btn-eventos">EVENTOS</a>
+      <a href="https://moodle.tucolegio.edu" target="_blank" rel="noopener" class="btn-ingresar">INGRESAR</a>
+    </div>
   </header>
 
-  <main>
-    <h1>Oferta Educativa - Nivel Secundaria</h1>
-    <p>Contenido detallado sobre el nivel secundaria.</p>
-  </main>
+<!-- 🟨 HERO SECUNDARIA -->
+<section class="secundaria-hero">
+  <div class="secundaria-header">
+    <h1>Nivel Secundaria</h1>
+    <p>Formación integral para jóvenes con visión de futuro</p>
+  </div>
+</section>
+
+
+  <!-- 🟦 DESCRIPCIÓN -->
+  <section class="secundaria-descripcion">
+    <div class="secundaria-texto">
+      <h2>Bienvenidos a Secundaria</h2>
+      <p>
+        En el nivel de Secundaria acompañamos a los estudiantes en una etapa
+        de consolidación de conocimientos, crecimiento personal y orientación vocacional.
+      </p>
+      <p>
+        Nuestra propuesta educativa se centra en el desarrollo de competencias,
+        pensamiento crítico, compromiso social y habilidades tecnológicas,
+        preparando a nuestros jóvenes para enfrentar con éxito los retos de la universidad y la vida profesional.
+      </p>
+    </div>
+    <div class="secundaria-imagen">
+      <img src="images/secundaria/secundaria1.jpg" alt="Estudiantes de secundaria en laboratorio">
+    </div>
+  </section>
+
+  <!-- 🟨 CARACTERÍSTICAS -->
+  <section class="secundaria-caracteristicas">
+    <h2>Lo que ofrecemos en Secundaria</h2>
+    <div class="caracteristicas-grid">
+      <div class="caracteristica">
+        <img src="images/icons/tecnologia.png" alt="Tecnología y ciencia">
+        <h3>Tecnología y Ciencia</h3>
+        <p>Laboratorios modernos que estimulan la investigación y la innovación.</p>
+      </div>
+      <div class="caracteristica">
+        <img src="images/icons/liderazgo.png" alt="Liderazgo estudiantil">
+        <h3>Liderazgo Estudiantil</h3>
+        <p>Fomentamos el liderazgo, la responsabilidad y la participación activa.</p>
+      </div>
+      <div class="caracteristica">
+        <img src="images/icons/idiomas.png" alt="Dominio de idiomas">
+        <h3>Idiomas</h3>
+        <p>Programa bilingüe reforzado y oportunidades de intercambio cultural.</p>
+      </div>
+      <div class="caracteristica">
+        <img src="images/icons/orientacion.png" alt="Orientación vocacional">
+        <h3>Orientación Vocacional</h3>
+        <p>Acompañamos a nuestros estudiantes en la elección de su proyecto de vida.</p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>

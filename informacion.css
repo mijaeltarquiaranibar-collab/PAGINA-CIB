@@ -1,0 +1,123 @@
+/* 🟩 HERO INFORMACIÓN */
+.informacion-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+}
+
+/* 📌 Encabezado */
+.informacion-header {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 35px 45px;
+  max-width: 850px;
+  margin: 0 auto 45px auto;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.informacion-header:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.informacion-header h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.informacion-header p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 🟦 Lista de información */
+.informacion-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px 20px 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 🗂️ Tarjeta de información */
+.info-card {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* 🎯 Iconos */
+.info-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  background: #004080;
+}
+
+.info-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(5000%) hue-rotate(200deg) brightness(90%) contrast(90%);
+  transition: filter 0.3s ease;
+}
+
+.info-card:hover .info-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* 📝 Títulos */
+.info-card h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* 📄 Párrafos */
+.info-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* 🔗 Links */
+.info-card a {
+  color: #004080;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+  color: #0066cc;
+}

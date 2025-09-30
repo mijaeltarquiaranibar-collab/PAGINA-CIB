@@ -1,0 +1,163 @@
+/* 🟩 HERO HISTORIA */
+.historia-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📌 Encabezado tipo tarjeta */
+.historia-header {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 35px 45px;
+  max-width: 850px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historia-header:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.historia-header h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.historia-header p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 🟦 CONTENIDO HISTORIA */
+.historia-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto */
+.historia-texto {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.historia-texto h2 {
+  font-size: 1.9rem;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.historia-texto p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 18px;
+}
+
+/* Imágenes */
+.historia-imagenes {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.historia-imagenes img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.historia-imagenes img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  cursor: zoom-in;
+}
+
+/* Iconos (si se agregan) */
+.historia-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.historia-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.historia-icon:hover {
+  background: #004080;
+}
+
+.historia-icon:hover img {
+  filter: invert(1);
+}
+
+/* 🟨 RESPONSIVO */
+@media (max-width: 900px) {
+  .historia-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .historia-imagenes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .historia-imagenes img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .historia-header h1 {
+    font-size: 2rem;
+  }
+
+  .historia-header p {
+    font-size: 1rem;
+  }
+
+  .historia-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .historia-imagenes img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,138 @@
+/* 🎯 HERO */
+.comunicados-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+}
+
+/* 📌 ENCABEZADO */
+.comunicados-header {
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px 45px;
+  max-width: 850px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comunicados-header:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.comunicados-header h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.comunicados-header p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* 📰 LISTA DE COMUNICADOS */
+.comunicados-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  padding: 40px 20px 80px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* 📦 TARJETA */
+.comunicado-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.comunicado-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* 🖼️ IMAGEN */
+.comunicado-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.comunicado-card:hover .comunicado-img {
+  transform: scale(1.05);
+}
+
+/* 📝 CONTENIDO */
+.comunicado-content {
+  padding: 22px 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.comunicado-content h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.comunicado-content .fecha {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.comunicado-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+/* 🔗 BOTÓN */
+.btn-leer {
+  align-self: flex-start;
+  background: #004080;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-leer:hover {
+  background: #0066cc;
+  transform: translateY(-2px);
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .comunicados-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .comunicados-header p {
+    font-size: 1rem;
+  }
+
+  .comunicado-content h2 {
+    font-size: 1.3rem;
+  }
+}

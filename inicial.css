@@ -1,0 +1,179 @@
+/* 🟩 HERO INICIAL */
+.inicial-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📌 Encabezado tipo tarjeta */
+.inicial-header {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 35px 45px;
+  max-width: 850px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicial-header:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.inicial-header h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.inicial-header p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 📖 DESCRIPCIÓN */
+.inicial-descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto */
+.inicial-texto {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.inicial-texto h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.inicial-texto p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Imágenes */
+.inicial-imagen {
+  flex: 1 1 300px;
+  max-width: 420px;
+}
+
+.inicial-imagen img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.inicial-imagen img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  cursor: zoom-in;
+}
+
+/* 🟦 CARACTERÍSTICAS */
+.inicial-caracteristicas {
+  background: #f8fafc;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.inicial-caracteristicas h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.caracteristicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjetas con hover */
+.caracteristica {
+  background: #fff;
+  padding: 28px 22px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.caracteristica:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* Iconos circulares con inversión de color */
+.caracteristica img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  padding: 10px;
+  transition: transform 0.35s ease, background 0.3s ease, filter 0.3s ease;
+}
+
+.caracteristica:hover img {
+  transform: scale(1.15) rotate(-4deg);
+  background: #004080;
+  filter: invert(1);
+}
+
+.caracteristica h3 {
+  font-size: 1.25rem;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.caracteristica p {
+  font-size: 0.97rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .inicial-descripcion {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .inicial-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .inicial-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .inicial-header p {
+    font-size: 1rem;
+  }
+}

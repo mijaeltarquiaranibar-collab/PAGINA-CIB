@@ -1,0 +1,134 @@
+/* 🟩 HERO JUNTA */
+.junta-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.junta-header {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 35px 45px;
+  max-width: 850px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.junta-header:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.junta-header h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.junta-header p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 🟦 LISTA DE MIEMBROS */
+.junta-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px 20px 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 🗂️ TARJETA DE MIEMBRO */
+.junta-card {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: auto; /* Se ajusta al contenido */
+}
+
+/* Hover efecto */
+.junta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.14);
+}
+
+/* Imagen de miembro */
+.junta-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.junta-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nombres y cargos */
+.junta-card h2,
+.junta-card p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+.junta-card h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  font-weight: 600;
+}
+
+.junta-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .junta-lista {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .junta-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .junta-header p {
+    font-size: 1rem;
+  }
+
+  .junta-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .junta-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .junta-card p {
+    font-size: 0.95rem;
+  }
+}

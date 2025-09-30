@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Comunicados - Colegio Internacional Bilingue</title>
+  <title>Anuncios - Colegio Internacional Bilingue</title>
 
-  <!-- Icono del logo -->
+  <!-- Icono -->
   <link rel="icon" href="images/favicon.png" type="image/png">
 
-  <!-- CSS general y específico -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="comunicados.css" />
+  <link rel="stylesheet" href="anuncios.css" />
 </head>
 
 <body>
 
-  <!-- 🟨 BARRA DE NAVEGACIÓN -->
+  <!-- 🟨 NAVBAR -->
   <header class="navbar">
     <div class="logo">
       <img src="images/logo.png" alt="Logo">
@@ -75,46 +75,34 @@
     </div>
   </header>
 
-  <!-- 🟩 HERO DE COMUNICADOS -->
-  <section class="comunicados-hero">
-    <div class="comunicados-header">
-      <h1>Comunicados</h1>
-      <p>Mantente informado con las últimas noticias y avisos importantes de nuestra institución.</p>
+  <!-- 🟩 HERO ANUNCIOS -->
+  <section class="anuncios-hero">
+    <div class="anuncios-header">
+      <h1>Anuncios</h1>
+      <p>Consulta los últimos anuncios y avisos importantes del colegio.</p>
     </div>
   </section>
 
-  <!-- 🟦 LISTA DE COMUNICADOS -->
-  <section class="comunicados-lista">
-    <div class="comunicado-card">
-      <img src="images/comunicados/comunicado1.jpg" alt="Comunicado 1" class="comunicado-img">
-      <div class="comunicado-content">
-        <h2>Inicio de Clases 2025</h2>
-        <span class="fecha">Publicado: 15 de enero, 2025</span>
-        <p>Les informamos que el inicio oficial de clases será el lunes 5 de febrero, en los horarios habituales.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </div>
+  <!-- 🟦 LISTA DE ANUNCIOS -->
+  <section class="anuncios-lista">
+    <div class="anuncio-card">
+      <img src="images/anuncios/anuncio1.jpg" alt="Anuncio 1">
+      <h2>Inicio de clases</h2>
+      <p>El año lectivo comenzará el 3 de marzo con todas las medidas de bioseguridad.</p>
     </div>
-
-    <div class="comunicado-card">
-      <img src="images/comunicados/comunicado2.jpg" alt="Comunicado 2" class="comunicado-img">
-      <div class="comunicado-content">
-        <h2>Reunión de Padres de Familia</h2>
-        <span class="fecha">Publicado: 20 de enero, 2025</span>
-        <p>Convocamos a todos los padres de familia a la reunión general este viernes 25 de enero a las 18:00 hrs.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </div>
+    <div class="anuncio-card">
+      <img src="images/anuncios/anuncio2.jpg" alt="Anuncio 2">
+      <h2>Reunión de padres</h2>
+      <p>Se realizará una reunión general de padres el 15 de marzo a las 18:00 en el auditorio.</p>
     </div>
-
-    <div class="comunicado-card">
-      <img src="images/comunicados/comunicado3.jpg" alt="Comunicado 3" class="comunicado-img">
-      <div class="comunicado-content">
-        <h2>Entrega de Boletines</h2>
-        <span class="fecha">Publicado: 5 de febrero, 2025</span>
-        <p>La entrega de boletines se realizará de manera presencial en la secretaría del colegio a partir del 10 de febrero.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </div>
+    <div class="anuncio-card">
+      <img src="images/anuncios/anuncio3.jpg" alt="Anuncio 3">
+      <h2>Excursión escolar</h2>
+      <p>Los estudiantes de primaria visitarán el parque ecológico el 22 de abril.</p>
     </div>
   </section>
 
+  <!-- scripts de javascript -->
+  <script src="menu-hamburguesa.js"></script>
 </body>
 </html>

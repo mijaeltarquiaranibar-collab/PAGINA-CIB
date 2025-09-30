@@ -1,24 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto - Redes Sociales</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redes Sociales - Colegio Internacional Bilingue</title>
+
+  <!-- Icono del logo -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- CSS general y específico -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="redes.css" />
 </head>
+
 <body>
 
-  <!-- Menú de navegación -->
+  <!-- 🟨 BARRA DE NAVEGACIÓN -->
   <header class="navbar">
-    <!-- Copiar menú igual que en index.html -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <div class="logo-text">
+        <span class="district">COLEGIO INTERNACIONAL BILINGUE</span><br>
+        <span class="subtitle">Santa Cruz</span>
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <span class="nav-link">Nosotros ▾</span>
+        <div class="dropdown-content">
+          <a href="mision-vision.html">Misión y Visión</a>
+          <a href="historia.html">Historia</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Oferta educativa ▾</span>
+        <div class="dropdown-content">
+          <a href="inicial.html">Inicial</a>
+          <a href="primaria.html">Primaria</a>
+          <a href="secundaria.html">Secundaria</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Noticias ▾</span>
+        <div class="dropdown-content">
+          <a href="comunicados.html">Comunicados</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Contacto ▾</span>
+        <div class="dropdown-content">
+          <a href="informacion.html">Información</a>
+          <a href="ubicacion.html">Ubicación</a>
+          <a href="redes.html">Redes Sociales</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="eventos.html" class="btn-eventos">EVENTOS</a>
+      <a href="https://moodle.tucolegio.edu" target="_blank" rel="noopener" class="btn-ingresar">INGRESAR</a>
+    </div>
   </header>
 
-  <main>
-    <h1>Contacto - Redes Sociales</h1>
-    <p>Encuentra y sigue nuestras redes sociales oficiales.</p>
-    <!-- Puedes agregar íconos y enlaces a las redes aquí -->
-  </main>
+  <!-- 🟩 HERO DE REDES -->
+  <section class="redes-hero">
+    <div class="redes-header">
+      <h1>Redes Sociales</h1>
+      <p>Síguenos en nuestras redes sociales y mantente informado sobre noticias y eventos del colegio.</p>
+    </div>
+  </section>
+
+  <!-- 🟦 TARJETAS DE REDES -->
+  <section class="redes-lista">
+
+    <div class="red-card">
+      <div class="red-icon">
+        <img src="images/icons/facebook.png" alt="Facebook">
+      </div>
+      <h2>Facebook</h2>
+      <p>Mantente al día con noticias y eventos en nuestra página oficial de Facebook.</p>
+      <a href="https://www.facebook.com/ColegioIB" target="_blank" class="btn-visitar">Visitar</a>
+    </div>
+
+    <div class="red-card">
+      <div class="red-icon">
+        <img src="images/icons/instagram.png" alt="Instagram">
+      </div>
+      <h2>Instagram</h2>
+      <p>Explora fotos, historias y actividades recientes del colegio en Instagram.</p>
+      <a href="https://www.instagram.com/ColegioIB" target="_blank" class="btn-visitar">Visitar</a>
+    </div>
+
+    <div class="red-card">
+      <div class="red-icon">
+        <img src="images/icons/twitter.png" alt="Twitter">
+      </div>
+      <h2>Twitter</h2>
+      <p>Sigue nuestras actualizaciones y anuncios rápidos en Twitter.</p>
+      <a href="https://twitter.com/ColegioIB" target="_blank" class="btn-visitar">Visitar</a>
+    </div>
+
+    <div class="red-card">
+      <div class="red-icon">
+        <img src="images/icons/youtube.png" alt="YouTube">
+      </div>
+      <h2>YouTube</h2>
+      <p>Mira videos de eventos, clases y actividades del colegio en nuestro canal de YouTube.</p>
+      <a href="https://www.youtube.com/ColegioIB" target="_blank" class="btn-visitar">Visitar</a>
+    </div>
+
+  </section>
 
 </body>
 </html>

@@ -1,24 +1,137 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oferta Educativa - Inicial</title>
-  
-  <link rel="stylesheet" href="inicial.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nivel Inicial - Colegio Internacional Bilingue</title>
 
+  <!-- Icono -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="inicial.css" />
 </head>
+
 <body>
 
-  <!-- Menú de navegación (puedes copiar igual que en index.html) -->
+  <!-- 🟨 NAVBAR -->
   <header class="navbar">
-    <!-- Aquí va el menú completo igual que en index.html -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <div class="logo-text">
+        <span class="district">COLEGIO INTERNACIONAL BILINGUE</span><br>
+        <span class="subtitle">Santa Cruz</span>
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <span class="nav-link">Nosotros ▾</span>
+        <div class="dropdown-content">
+          <a href="mision-vision.html">Misión y Visión</a>
+          <a href="historia.html">Historia</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Oferta educativa ▾</span>
+        <div class="dropdown-content">
+          <a href="inicial.html" class="active">Inicial</a>
+          <a href="primaria.html">Primaria</a>
+          <a href="secundaria.html">Secundaria</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Noticias ▾</span>
+        <div class="dropdown-content">
+          <a href="comunicados.html">Comunicados</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="nav-link">Contacto ▾</span>
+        <div class="dropdown-content">
+          <a href="informacion.html">Información</a>
+          <a href="ubicacion.html">Ubicación</a>
+          <a href="redes.html">Redes Sociales</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="eventos.html" class="btn-eventos">EVENTOS</a>
+      <a href="https://moodle.tucolegio.edu" target="_blank" rel="noopener" class="btn-ingresar">INGRESAR</a>
+    </div>
   </header>
 
-  <main>
-    <h1>Oferta Educativa - Nivel Inicial</h1>
-    <p>Contenido detallado sobre el nivel inicial.</p>
-  </main>
+ 
+  <!-- 🟩 HERO INICIAL -->
+<section class="inicial-hero">
+  <div class="inicial-header">
+    <h1>Nivel Inicial</h1>
+    <p>El primer paso hacia un futuro brillante</p>
+  </div>
+</section>
+
+
+  <!-- 🟦 DESCRIPCIÓN INICIAL -->
+  <section class="inicial-descripcion">
+    <div class="inicial-texto">
+      <h2>Bienvenidos al Nivel Inicial</h2>
+      <p>
+        El nivel inicial es la base fundamental del aprendizaje de nuestros estudiantes. 
+        En esta etapa, fomentamos la curiosidad, la creatividad y la socialización, 
+        mediante un enfoque lúdico que despierta el amor por aprender.
+      </p>
+      <p>
+        Contamos con un equipo docente especializado en educación infantil, 
+        instalaciones seguras y recursos diseñados especialmente para los más pequeños.
+      </p>
+    </div>
+    <div class="inicial-imagen">
+      <img src="images/inicial/inicial1.jpg" alt="Aula de inicial">
+    </div>
+  </section>
+
+  <!-- 🟨 CARACTERÍSTICAS INICIAL -->
+
+  <section class="inicial-caracteristicas">
+    <h2>Lo que ofrecemos en Inicial</h2>
+    <div class="caracteristicas-grid">
+      <div class="caracteristica">
+        
+        <img src="images/icons/juegos.png" alt="Metodología lúdica">
+        <h3>Metodología Lúdica</h3>
+        <p>El aprendizaje se construye a través del juego y la exploración.</p>
+      </div>
+      <div class="caracteristica">
+        <img src="images/icons/arte.png" alt="Actividades creativas">
+        <h3>Actividades Creativas</h3>
+        <p>Talleres de arte, música y expresión corporal que estimulan la imaginación.</p>
+      </div>
+      <div class="caracteristica">
+        <img src="images/icons/docente.png" alt="Docentes especializados">
+        <h3>Docentes Especializados</h3>
+        <p>Profesionales con experiencia en el desarrollo infantil.</p>
+      </div>
+      <div class="caracteristica">
+        <img src="images/icons/valores.png" alt="Formación en valores">
+        <h3>Formación en Valores</h3>
+        <p>Fomentamos la empatía, la solidaridad y el respeto desde temprana edad.</p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>

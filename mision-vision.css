@@ -1,0 +1,118 @@
+/* 🟩 HERO MISIÓN Y VISIÓN */
+.mision-vision-hero {
+  background: linear-gradient(135deg, #f0f4f8, #e6eef5);
+  padding: 100px 20px 60px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor columnas */
+.mision-vision-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Columnas */
+.mision-column,
+.vision-column {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  flex: 1 1 300px;
+  max-width: 500px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: #333;
+}
+
+.mision-column:hover,
+.vision-column:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Iconos circulares con efecto */
+.icon-top {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.mision-column:hover .icon-top,
+.vision-column:hover .icon-top {
+  background: #004080;
+}
+
+.icon-top img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.mision-column:hover .icon-top img,
+.vision-column:hover .icon-top img {
+  filter: invert(1); /* Icono se vuelve blanco al hacer hover */
+}
+
+/* Títulos */
+.mision-column h2,
+.vision-column h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004080;
+  font-weight: 600;
+}
+
+/* Párrafos */
+.mision-column p,
+.vision-column p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Imágenes debajo del texto */
+.mision-column img.mision-img,
+.vision-column img.vision-img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mision-column img.mision-img:hover,
+.vision-column img.vision-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  cursor: zoom-in;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .mision-vision-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mision-column,
+  .vision-column {
+    max-width: 90%;
+  }
+}
